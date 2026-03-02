@@ -102,4 +102,3 @@ Across LAION-10M, T2I-10M, and DataComp-8.2M, IAQP consistently improves Recall@
 
 - This repository keeps only the code and the canonical reproduction notebooks.
 - Large datasets, checkpoints, paper build artifacts, and generated outputs are intentionally excluded from git.
-- Some paper-source assets live under `latex_results/`, but that directory is not part of the tracked reproduction surface.
