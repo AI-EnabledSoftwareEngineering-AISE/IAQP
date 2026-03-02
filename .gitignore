@@ -1,0 +1,48 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local environments and editor files
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Large local data and generated artifacts
+data/
+notebooks/outputs/
+latex_results/
+notebooks/projector/
+
+# Generated binary/model/cache files
+*.pt
+*.pth
+*.faiss
+*.bin
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Local build and log outputs
+build/
+dist/
+*.log
+htmlcov/
+.coverage
+.coverage.*
+.tox/
+.nox/
+.hypothesis/
+
+# OS/editor noise
+Thumbs.db
