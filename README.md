@@ -61,10 +61,21 @@ Generated artifacts are expected under `notebooks/outputs/`, which is intentiona
 
 The clean reproduction path is:
 
-1. Prepare precomputed embedding caches for LAION-10M, T2I-10M, and DataComp-8.2M.
+1. Download or prepare the required raw datasets.
 2. Train 3-epoch checkpoints with [`core/main.py`](/home/hamed/projects/IAQP/core/main.py).
 3. Run the evaluation suite with [`notebooks/regenerate_all_results.py`](/home/hamed/projects/IAQP/notebooks/regenerate_all_results.py).
 4. Run the throughput suite with [`notebooks/regenerate_qps_results.py`](/home/hamed/projects/IAQP/notebooks/regenerate_qps_results.py).
+
+Dataset download helper:
+
+```bash
+python scripts/download_dataset.py t2i-10M
+python scripts/download_dataset.py laion-10M
+```
+
+The downloader writes into `data/t2i-10M/` or `data/laion-10M/` and prepares the file layout used by the rest of the project.
+
+For DataComp, use the official [mlfoundations/datacomp](https://github.com/mlfoundations/datacomp) tooling and download the `small` pool (`12.8M` pool size) with `python download_upstream.py --scale small --data_dir <output_dir>`. In our setup, this small pool is the source from which we successfully retain the `8.2M` image subset used for DataComp-8.2M experiments.
 
 Example commands:
 
